@@ -1,0 +1,62 @@
+% Created 2023-02-17 Fri 20:45
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{190022658}
+\date{\today}
+\title{CS4303 P1 - Report}
+\hypersetup{
+ pdfauthor={190022658},
+ pdftitle={CS4303 P1 - Report},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\label{sec:org5d2902f}
+The practical tasked us to implement in Processing a variant of the classic Artillery Game. The game is made attractive using colors and clouds. The physics components of the implementation contains
+\begin{itemize}
+\item Damping force
+\item Gravity
+\item Wind
+\end{itemize}
+The controls include:
+\begin{itemize}
+\item moving the tank using 'a' and 'd'
+\item control angle using right and left arrow keys
+\item control strength using up and down arrow keys
+\item restarting the game at the end using the enter key
+\end{itemize}
+
+\section{Design}
+\label{sec:orga5b62d1}
+This is a program written in the Processing language for a two-player tank game. The game involves two tanks shooting at each other until one tank's health points are reduced to zero. The tanks take turns firing at each other, and the player who manages to eliminate the opponent's tank first wins the game.
+
+The game screen is divided into two parts, with the terrain at the bottom of the screen, and the tank and obstacle on top of the terrain. The tanks can move horizontally using the 'a' and 'd' keys, and can adjust the angle and power of their shots using the arrow keys. Pressing the spacebar fires the projectile, and the wind speed and direction affect the trajectory of the projectile. The game ends when one tank is destroyed, and the player can restart the game by pressing the Enter key.
+
+The program defines the game objects, such as the tanks and obstacles, as classes that inherit from the GameObject class. The game objects are stored in ArrayLists, which allow for easy iteration and modification of the objects. The game logic is implemented using a series of conditional statements and boolean flags that track the state of the game. The physics simulation of the projectile is implemented using the PVector class, which represents a two-dimensional vector, and a damping factor that simulates air resistance.
+
+The game state is stored as an enum. This checks at key presses and when drawing on screen. This creates an opening screen, a playing screen, and a closing scene where you can restart the game.
+
+Overall, this program provides an example of how to implement a simple 2D game using the Processing language.
+
+\section{Testing}
+\label{sec:orgb687217}
+\section{Conclusion}
+\label{sec:org432c45d}
+This was a very good opportunity to learn the Processing language, and implement some of the concepts from the Physics component of the module. The practical was also very fun to implement. If I had more time I would have written a more sophisticated AI.
+\end{document}
